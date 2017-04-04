@@ -52,7 +52,6 @@ public class YzzTab extends ViewGroup{
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        //super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         measureChildren(widthMeasureSpec, heightMeasureSpec);
         this.widthMeasureSpec = widthMeasureSpec;
         this.heightMeasureSpec = heightMeasureSpec;
@@ -61,7 +60,6 @@ public class YzzTab extends ViewGroup{
         int wModel = MeasureSpec.getMode(widthMeasureSpec);
         int hModel = MeasureSpec.getMode(heightMeasureSpec);
         int count = getChildCount();
-        Log.e("====width======", "=========" + width);
         switch (mModel) {
             case MODEL_CENTER:
                 measureCenter(count, wModel, hModel, width, height);
@@ -223,7 +221,6 @@ public class YzzTab extends ViewGroup{
                 layoutCenter(count);
                 break;
         }
-        Log.e("maxScroll", "============" + maxScroll + "=margin=" + margin);
     }
 
     private void layoutDefault(int count) {
